@@ -30,6 +30,7 @@ pkgver() {
 prepare() {
   cd "${srcdir}/dbus"
   NOCONFIGURE=1 ./autogen.sh
+  autoreconf -fiv
 }
 
 build() {
